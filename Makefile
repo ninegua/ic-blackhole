@@ -3,7 +3,10 @@ SRC=$(CANISTERS:%=src/%.mo)
 OBJ=$(CANISTERS:%=dist/%.wasm)
 OBJ_OPT=$(CANISTERS:%=dist/%-opt.wasm)
 IDL=$(CANISTERS:%=dist/%.did)
-MOC_OPT=--package base .vessel/base/927119e172964f4038ebc7018f9cc1b688544bfa/src
+MOC_OPT?=$(vessel sources)
+
+dfx.json:
+	@echo '{}' > $@
 
 build: $(OBJ) $(IDL) $(OBJ_OPT)
 
