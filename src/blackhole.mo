@@ -1,7 +1,3 @@
-import Nat "mo:base/Nat";
-import Nat8 "mo:base/Nat8";
-import Principal "mo:base/Principal";
-
 actor {
   public type canister_id = Principal;
 
