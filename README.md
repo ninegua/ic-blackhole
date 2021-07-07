@@ -32,7 +32,7 @@ We may introduce more functionalities with each new version, and once deployed i
 
 ### Version 0.0.0
 
-Black hole Canister ID: [`e3mmv-5qaaa-aaaah-aadma-cai`](https://ic.rocks/principal/e3mmv-5qaaa-aaaah-aadma-cai).
+Black hole Canister ID: [`e3mmv-5qaaa-aaaah-aadma-cai`](https://ic.rocks/principal/e3mmv-5qaaa-aaaah-aadma-cai)
 
 This version gives one interface `canister_status` that is identical to the IC management canister.
 
@@ -56,7 +56,7 @@ By the way, this is how the black hole will maintain its cycles balance, possibl
 
 **WARNING: Be cautious with the steps. You'll lose control to your canisters forever!**
 
-Well, if you decide to lose control by making your canister immutable. Simply give it to a black hole.
+Well, if you decide to lose control by making your canister immutable, simply give it to a black hole.
 Pick one of the black hole canister IDs published above, and run the following command (`e3mmv-5qaaa-aaaah-aadma-cai` aka version 0.0.0 is used here):
 
 ```
