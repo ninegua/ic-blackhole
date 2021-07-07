@@ -1,0 +1,28 @@
+name: "release"
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.3.4
+    - uses: cachix/install-nix-action@v13
+      with:
+        nix_path: nixpkgs=channel:nixos-21.05
+    - uses: cachix/cachix-action@v10
+      with:
+        name: ninegua
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+    - run: nix-build
+    - name: Upload release package
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ github.ref }}
+        file: result/bin/*
+        file_glob: true
