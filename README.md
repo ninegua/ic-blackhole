@@ -60,8 +60,8 @@ Well, if you decide to lose control and make your canister immutable. Simply giv
 dfx canister --network=ic update-settings --controller e3mmv-5qaaa-aaaah-aadma-cai [CANISTER_ID]
 ```
 
-To set multiple controllers is a bit more involved:
+To set multiple controllers is a bit more involved, because [dfx] does not support it yet.
+You either need to do it programmatically (making a call to the IC management canister), or you can use [ic-utils].
 
-```
-dfx canister --network=ic call aaaaa-aaa update_settings 'record { canister_id = principal "YOUR_CANISTER_ID"; settings = record { controllers = opt vec { principal "..."; principal "..."; ... } } }'
-```
+[dfx]: https://sdk.dfinity.org/docs/developers-guide/install-upgrade-remove.html
+[ic-utils]: https://github.com/ninegua/ic-utils
