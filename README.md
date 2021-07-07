@@ -2,7 +2,7 @@
 
 *A black hole is a region in space with a gravitational pull so strong that nothing, not even light, can escape through it.*
 
-Once a canister sets its only controller to a black hole, it becomes immutable.
+Once a canister sets its only controller to a black hole, it becomes immutable and more!
 
 ## How to verify it is a black hole
 
@@ -32,7 +32,7 @@ We may introduce more functionalities with each new version, and once deployed i
 
 ### Version 0.0.0
 
-Black hole Canister ID: [`e3mmv-5qaaa-aaaah-aadma-cai`]().
+Black hole Canister ID: [`e3mmv-5qaaa-aaaah-aadma-cai`](https://ic.rocks/principal/e3mmv-5qaaa-aaaah-aadma-cai).
 
 This version gives one interface `canister_status` that is identical to the IC management canister.
 
