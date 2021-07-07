@@ -5,9 +5,6 @@ OBJ_OPT=$(CANISTERS:%=dist/%-opt.wasm)
 IDL=$(CANISTERS:%=dist/%.did)
 MOC_OPT?=$(vessel sources)
 
-dfx.json:
-	@echo '{}' > $@
-
 build: $(OBJ) $(IDL) $(OBJ_OPT)
 
 clean:
@@ -21,6 +18,9 @@ dist/%.wasm: src/%.mo | dist
 
 dist/%.did: src/%.mo | dist
 	moc $(MOC_OPT) --idl -o $@ $<
+
+dfx.json:
+	@echo '{"canisters":{"blackhole":{"type":"custom","candid":"dist/blackhole.did","wasm":"dist/blackhole-opt.wasm","build":""}}}' > $@
 
 .PHONY: build clean really-clean
 
