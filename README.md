@@ -54,18 +54,15 @@ By the way, this is how the black hole will maintain its cycles balance, possibl
 
 ## How to give your canister to a black hole
 
-**WARNING: Be cautious with the steps. You'll lose control to your canisters forever!**
+**WARNING: Be cautious with the steps. You might lose control to your canisters forever!**
 
-Well, if you decide to lose control by making your canister immutable, simply give it to a black hole.
 Pick one of the black hole canister IDs published above, and run the following command (`e3mmv-5qaaa-aaaah-aadma-cai` aka version 0.0.0 is used here):
 
 ```
-dfx canister --network=ic update-settings --controller e3mmv-5qaaa-aaaah-aadma-cai [CANISTER_ID]
+dfx canister --network=ic update-settings --controller [your-existing-controller-id] --controller e3mmv-5qaaa-aaaah-aadma-cai [CANISTER_ID]
 ```
 
-To set multiple controllers is a bit more involved due to the lack of support from [dfx].
-You can either do it programmatically by making a call to the IC management canister, or you can use [ic-utils].
-Or if you know a better way, please submit a pull request. Thanks!
+You will need at least dfx version 0.8.4 to be able to set multiple controllers as shown above.
 
 [dfx]: https://sdk.dfinity.org/docs/developers-guide/install-upgrade-remove.html
 [ic-utils]: https://github.com/ninegua/ic-utils
