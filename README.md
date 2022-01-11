@@ -59,7 +59,10 @@ By the way, this is how the black hole will maintain its cycles balance, possibl
 Pick one of the black hole canister IDs published above, and run the following command (`e3mmv-5qaaa-aaaah-aadma-cai` aka version 0.0.0 is used here):
 
 ```
-dfx canister --network=ic update-settings --controller [your-existing-controller-id] --controller e3mmv-5qaaa-aaaah-aadma-cai [CANISTER_ID]
+dfx canister --network=ic update-settings \
+    --controller [your-existing-controller-id] \
+    --controller e3mmv-5qaaa-aaaah-aadma-cai \
+    [CANISTER_ID]
 ```
 
 You will need at least dfx version 0.8.4 to be able to set multiple controllers as shown above.
