@@ -48,9 +48,14 @@ Information such as remaining cycles, module hash, etc. are now publicly and pro
 
 Why is it safe? Because the black hole canister itself is immutable, and cannot do anything to the canister it controls except revealing its status.
 
-Setting a black hole as the sole controller of a canister will make it non-upgradable.
+Setting a black hole as the *sole* controller of a canister will make it *non-upgradable*.
 One can still top-up its cycles via the ledger, but no one can change its code or behavior.
 By the way, this is how the black hole will maintain its cycles balance, possibly through donations.
+
+*Making canister status public also implies that anyone can query the remaining cycle balance of your black holed canister.*
+This exposure means one can easily figure out how much cycle your canister consumes per day or even per method call.
+Attackers may leverage such information and launch a targeted attack to drain your cycles.
+Make sure you understand the consequence and have counter measures in place (e.g. use automatic cycle top-up service such as [Tip Jar]).
 
 ## How to give your canister to a black hole
 
@@ -69,3 +74,4 @@ You will need at least dfx version 0.8.4 to be able to set multiple controllers 
 
 [dfx]: https://sdk.dfinity.org/docs/developers-guide/install-upgrade-remove.html
 [ic-utils]: https://github.com/ninegua/ic-utils
+[Tip Jar]: https://tipjar.rocks
