@@ -65,10 +65,10 @@ Pick one of the black hole canister IDs published above, and run the following c
 
 ```
 dfx canister --network=ic update-settings \
-    --controller [your-existing-controller-id] \
-    --controller e3mmv-5qaaa-aaaah-aadma-cai \
+    --add-controller e3mmv-5qaaa-aaaah-aadma-cai \
     [CANISTER_ID]
 ```
+You will need at least dfx version 0.9.2 to be able to add a controller as shown above.
 
 You will need at least dfx version 0.8.4 to be able to set multiple controllers as shown above.
 
