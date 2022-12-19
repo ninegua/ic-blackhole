@@ -76,6 +76,6 @@ To set a black hole as your canister's **only** controller, run the above comman
 - dfx >= 0.12.0: replace `--add-controller` with `--set-controller`
 - dfx 0.8.4 to 0.11.2: replace `--add-controller` with `--controller`
 
-[dfx]: https://sdk.dfinity.org/docs/developers-guide/install-upgrade-remove.html
+[dfx]: https://sdk.dfinity.org/docs/developers-guide/install-upgrade-remove
 [ic-utils]: https://github.com/ninegua/ic-utils
 [Tip Jar]: https://tipjar.rocks
