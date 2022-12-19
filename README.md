@@ -70,7 +70,11 @@ dfx canister --network=ic update-settings \
 ```
 You will need at least dfx version 0.9.2 to be able to add a controller as shown above.
 
-You will need at least dfx version 0.8.4 to be able to set multiple controllers as shown above.
+The above command makes the specified black hole a controller of your canister, but does not remove your access.
+
+To set a black hole as your canister's **only** controller, run the above command with the following modification.  Again, this will **remove your ability to control your canister!**
+- dfx >= 0.12.0: replace `--add-controller` with `--set-controller`
+- dfx 0.8.4 to 0.11.2: replace `--add-controller` with `--controller`
 
 [dfx]: https://sdk.dfinity.org/docs/developers-guide/install-upgrade-remove.html
 [ic-utils]: https://github.com/ninegua/ic-utils
