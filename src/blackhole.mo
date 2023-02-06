@@ -14,6 +14,7 @@ actor {
      cycles : Nat;
      settings : definite_canister_settings;
      module_hash : ?[Nat8];
+     idle_cycles_burned_per_day : Nat;
   };
 
   public type IC = actor {
